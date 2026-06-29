@@ -15,29 +15,48 @@ stunde = jetzt.hour
 minute = jetzt.minute
 datum = jetzt.strftime("%d.%m")
 
-# TÄGLICH – 07:30 Uhr
 if stunde == 7 and minute >= 30 and minute < 31:
     sende_nachricht(
-        "Morgen Lena 🌸\n\n"
+        "Morgen Lena!\n\n"
         "Kurzer Reminder an dich selbst:\n\n"
-        "✨ Du bist eine tolle Freundin.\n"
-        "✨ Du bist eine tolle Schwester.\n"
-        "✨ Du bist eine sehr tolle Partnerin.\n\n"
-        "💛 Du darfst vertrauen – und vertraust auch heute in eine Partnerschaft."
+        "Du bist eine tolle Freundin.\n"
+        "Du bist eine tolle Schwester.\n"
+        "Du bist eine sehr tolle Partnerin.\n\n"
+        "Du darfst vertrauen und vertraust auch heute in eine Partnerschaft."
     )
 
-# 10. JULI – 08:00 Uhr
 if datum == "10.07" and stunde == 8 and minute < 1:
     sende_nachricht(
-        "Guten Morgen Lena 🌅\n\n"
+        "Guten Morgen Lena!\n\n"
         "Du schaffst es heute zu vertrauen.\n"
-        "Fokus auf dich – du bist bei dir.\n\n"
-        "Wünsch Moritz von Herzen viel Spaß. 💛\n"
-        "Du kannst ihm vertrauen."
+        "Fokus auf dich.\n\n"
+        "Wuensch Moritz von Herzen viel Spass. Du kannst ihm vertrauen."
     )
 
-# 10. JULI – 21:00 Uhr
 if datum == "10.07" and stunde == 21 and minute < 1:
     sende_nachricht(
-        "Hallo Lena 💜\n\n"
+        "Hallo Lena!\n\n"
         "Du vertraust Moritz zu hundert Prozent.\n"
+        "Du weisst, dass alles gut ist.\n"
+        "Du bist in hohem Frieden mit dir.\n\n"
+        "Er wird niemals etwas tun, was dich verletzt."
+    )
+
+if datum == "10.07" and stunde == 23 and minute < 1:
+    sende_nachricht(
+        "Hallo Lena!\n\n"
+        "Du vertraust Moritz zu hundert Prozent.\n"
+        "Du weisst, dass alles gut ist.\n"
+        "Du bist in hohem Frieden mit dir.\n\n"
+        "Er wird niemals etwas tun, was dich verletzt."
+    )
+
+if datum == "12.07" and stunde == 12 and minute < 1:
+    sende_nachricht(
+        "Reminder Lena!\n\n"
+        "Heute nur:\n"
+        "- Fragen stellen, wie es war\n"
+        "- Fragen, wie es ihm geht\n"
+        "- Mehr von dir erzaehlen\n\n"
+        "Keine anderen Fragen. Alles andere erst morgen."
+    )
