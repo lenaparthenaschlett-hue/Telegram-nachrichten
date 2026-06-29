@@ -1,0 +1,25 @@
+name: Telegram Nachrichten
+
+on:
+  schedule:
+    - cron: '30 5 * * *'   # 07:30 Uhr deutsch
+    - cron: '0 6 * * *'    # 08:00 Uhr deutsch
+    - cron: '0 10 * * *'   # 12:00 Uhr deutsch
+    - cron: '0 19 * * *'   # 21:00 Uhr deutsch
+    - cron: '0 21 * * *'   # 23:00 Uhr deutsch
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install requests
+        run: pip install requests
+      - name: Nachricht senden
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: python nachrichten.py
